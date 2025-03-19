@@ -5,44 +5,44 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Employee Tracker',
-      image: '/employee-tracker.png', // Replace with actual screenshot
+      image: '/images/employeesedit.png',
       repo: 'https://github.com/langiam/employee-tracker',
-      deployed: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID', // Link to demo video
+      deployed: 'https://drive.google.com/file/d/1hKBqcoEpI51tpJWJzNnGjs4I9bOCSeXp/view',
       description: 'A command-line application for managing employees, departments, and roles using MySQL and Node.js.',
     },
     {
       title: 'Professional README Generator',
-      image: '/readme-generator.png', // Replace with actual screenshot
+      image: '/images/READMEedit.png',
       repo: 'https://github.com/langiam/professional-readme-generator',
-      deployed: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID', // Link to demo video
+      deployed: 'https://drive.google.com/file/d/1adN05wo9QSR8cM3uRzmhpwo_zz8rRe1s/view',
       description: 'A CLI tool that generates high-quality README.md files based on user input.',
     },
     {
       title: 'Vehicle Builder',
-      image: '/vehicle-builder.png', // Replace with actual screenshot
+      image: '/images/vehicleedit.png',
       repo: 'https://github.com/langiam/vehicle-builder',
-      deployed: 'https://drive.google.com/file/d/1fxW4wHqAvBMA3Q6qLEmZVEEsj4u1LOsT/view', // Replace with actual deployment link
+      deployed: 'https://drive.google.com/file/d/1fxW4wHqAvBMA3Q6qLEmZVEEsj4u1LOsT/view',
       description: 'A web application allowing users to customize and preview vehicle builds.',
     },
     {
       title: 'Project One Website',
-      image: '/project-one.png', // Replace with actual screenshot
-      repo: 'https://github.com/langiam/project-one-website',
-      deployed: 'https://your-project-one-url.com', // Replace with actual deployment link
+      image: '/images/calendaredit.png',
+      repo: 'https://github.com/p1t5-Calendar/ProjectOne',
+      deployed: 'https://p1t5-calendar.github.io/ProjectOne/',
       description: 'A collaborative web project showcasing front-end design and API integration.',
     },
     {
-        title: 'CSS Website Demo',
-        image: '/my-new-website.png', // Replace with actual screenshot
-        repo: 'https://github.com/langiam/my-new-website',
-        deployed: 'https://your-new-website-url.com', // Replace with actual deployment link
-        description: 'A modern, responsive personal website built with HTML, CSS, and JavaScript.',
+      title: 'CSS Website Demo',
+      image: '/images/CSSedit.png',
+      repo: 'https://github.com/langiam/my-new-website',
+      deployed: 'https://langiam.github.io/my-new-website/',
+      description: 'A modern, responsive personal website built with HTML, CSS, and JavaScript.',
     },
     {
       title: 'Accessibility Challenge',
-      image: '/accessibility-challenge.png', // Replace with actual screenshot
+      image: '/images/accessibiltyedit.png',
       repo: 'https://github.com/langiam/accessibility-challenge',
-      deployed: 'https://your-accessibility-challenge-url.com', // Replace with actual deployment link
+      deployed: 'https://langiam.github.io/module-1-challenge-accessibility/',
       description: 'A project focusing on improving web accessibility and compliance with WCAG standards.',
     },
   ];
