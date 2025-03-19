@@ -2,39 +2,55 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true);
 
-  const handleBlur = (e) => {
-    if (!e.target.value) {
-      setErrors({ ...errors, [e.target.name]: 'This field is required' });
-    } else if (e.target.name === 'email' && !validateEmail(e.target.value)) {
-      setErrors({ ...errors, email: 'Invalid email address' });
-    } else {
-      setErrors({ ...errors, [e.target.name]: '' });
-    }
+    // Optional: Reset form after a few seconds
+    setTimeout(() => {
+      setFormData({ name: '', email: '', message: '' });
+      setIsSubmitted(false);
+    }, 3000);
   };
 
   return (
-    <section>
+    <section className="contact-container">
       <h2>Contact Me</h2>
-      <form>
-        <input name="name" placeholder="Name" onBlur={handleBlur} onChange={handleChange} />
-        {errors.name && <p>{errors.name}</p>}
-        
-        <input name="email" placeholder="Email" onBlur={handleBlur} onChange={handleChange} />
-        {errors.email && <p>{errors.email}</p>}
-        
-        <textarea name="message" placeholder="Message" onBlur={handleBlur} onChange={handleChange} />
-        {errors.message && <p>{errors.message}</p>}
-
-        <button type="submit">Send</button>
-      </form>
+      {isSubmitted ? (
+        <p className="success-message">Thank you! Your message has been sent.</p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <input
+            name="name"
+            placeholder="Your Name"
+            onChange={handleChange}
+            value={formData.name}
+            required
+          />
+          <input
+            name="email"
+            placeholder="Your Email"
+            type="email"
+            onChange={handleChange}
+            value={formData.email}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            onChange={handleChange}
+            value={formData.message}
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      )}
     </section>
   );
 };
